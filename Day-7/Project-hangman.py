@@ -9,10 +9,10 @@ live = 6
 
 char_list.extend("_" for i in range(len(letter)))
 
+print(hw.logo)
 ### Function
 def guess():
     global live
-    hw.logo
     user_guess = input("Guess the letter. ").lower()
     hw.clear_screen()
 
@@ -38,5 +38,5 @@ while blank > 0:
     if blank == 0:
         print("You Win")
     if live == 0:
-        print ("You loose.")
+        print ("You loose.\nCorrect word is " + '\033[1m' + letter + '\033[0m')
         break
